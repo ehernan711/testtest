@@ -1,0 +1,309 @@
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.8.3.js">
+   </script>
+     <style>     
+     #redball{
+     	position:absolute;
+     	left:530px;
+     	top:220px;
+     }
+
+     #greenball{
+        position:absolute;
+        left:680px;
+        top:220px;
+     }
+
+     #purpleball{
+        position:absolute;
+        left:530px;
+        top:370px;
+     }
+
+     #yellowball{
+        position:absolute;
+        left:680px;
+        top:370px;
+     }
+
+
+    
+
+
+     
+
+     </style>
+
+     </head>
+     
+    <!--image tags-->
+     <body>
+     <img width="75px" id="redball" src="redball.jpg">
+     
+     <img width="75px" id="greenball" src="greenball.jpg">
+
+     <img width="75px" id="purpleball" src="purpleball.jpg">
+
+     <img width="75px" id="yellowball" src="yellowball.jpg">
+
+
+
+
+
+    <div style="position:absolute;left:20px;top:10px; red; background-color:red;">
+    <table border="4"  color="red">
+
+        <tr>
+            <td><img width="60px" id="upleft" src="upleft.jpg"<button onclick="redballobj.move(-3,-3);">
+        </button></td>
+            
+            <td><img width="60px" id="up" src="up.jpg"button onclick="redballobj.move(0,-3);">
+            </button></td>
+            
+            <td><img width="60px" id="upright" src="upright.jpg"<button onclick="redballobj.move(3,-3);">
+        </button></td>
+        </tr>
+
+        <tr>
+           <td><img width="60px" id="left" src="left.jpg"button onclick="redballobj.move(-3,0);">
+           </button></td>
+           
+           <td><img width="60px" id="skeleton" src="skeleton.jpg"button onclick="fade_out();fade_in();">
+           </button></td>
+            
+           <td><img width="60px" id="right" src="right.jpg"button onclick="redballobj.move(3,0);">
+           </button></td>
+        </tr>
+
+        <tr>
+            <td><img width="60px" id="downleft" src="downleft.jpg"button onclick="redballobj.move(-3,3);"></td>
+           
+            <td><img width="60px" id="down" src="down.jpg"button onclick="redballobj.move(0,3);">
+            </button></td>
+           
+            <td><img width="60px" id="downright" src="downright.jpg"button onclick="redballobj.move(3,3);"></td>
+        </tr>
+    </table>
+</div>
+        
+
+
+    <div style="position:absolute;left:1020px;top:10px; background-color:green;">    
+    <table border="6px" color="green">
+
+        <tr>
+            <td><img width="60px" id="upleft" src="upleft.jpg"<button onclick="greenballobj.move(-3,-3);">
+        </button></td>
+            
+            <td><img width="60px" id="up" src="up.jpg"button onclick="greenballobj.move(0,-3);">
+            </button></td>
+            
+            <td><img width="60px" id="upright" src="upright.jpg"<button onclick="greenballobj.move(3,-3);">
+        </button></td>
+        </tr>
+
+        <tr>
+           <td><img width="60px" id="left" src="left.jpg"button onclick="greenballobj.move(-3,0);">
+           </button></td>
+           
+           <td><img width="60px" id="fire" src="fire.jpg"button onclick="fade_out();fade_in();stretch_out();stretch_in;">
+           </button></td>
+            
+           <td><img width="60px" id="right" src="right.jpg"button onclick="greenballobj.move(3,0);">
+           </button></td>
+        </tr>
+
+        <tr>
+            <td><img width="60px" id="downleft" src="downleft.jpg"button onclick="greenballobj.move(-3,3);"></td>
+           
+            <td><img width="60px" id="down" src="down.jpg"button onclick="greenballobj.move(0,3);">
+            </button></td>
+           
+            <td><img width="60px" id="downright" src="downright.jpg"button onclick="greenballobj.move(3,3);"></td>
+        </tr>
+    </table>
+    </div>
+
+
+
+    <div style="position:absolute;left:10px;top:500px; background-color:purple;">
+    <table border="6"  color="purple">
+        <tr>
+            <td><img width="60px" id="upleft" src="upleft.jpg"<button onclick="purpleballobj.move(-3,-3);">
+        </button></td>
+            
+            <td><img width="60px" id="up" src="up.jpg"button onclick="purpleballobj.move(0,-3);">
+            </button></td>
+            
+            <td><img width="60px" id="upright" src="upright.jpg"<button onclick="purpleballobj.move(3,-3);">
+        </button></td>
+        </tr>
+
+        <tr>
+           <td><img width="60px" id="left" src="left.jpg"button onclick="purpleballobj.move(-3,0);">
+           </button></td>
+           
+           <td><img width="60px" id="yeild" src="yeild.jpg"button onclick="stretch_out();stretch_in();">
+           </button></td>
+            
+           <td><img width="60px" id="right" src="right.jpg"button onclick="purpleballobj.move(3,0);">
+           </button></td>
+        </tr>
+
+        <tr>
+            <td><img width="60px" id="downleft" src="downleft.jpg"button onclick="purpleballobj.move(-3,3);"></td>
+           
+            <td><img width="60px" id="down" src="down.jpg"button onclick="purpleballobj.move(0,3);">
+            </button></td>
+           
+            <td><img width="60px" id="downright" src="downright.jpg"button onclick="purpleballobj.move(3,3);"></td>
+        </tr>
+       </table>
+       </div>
+
+
+
+         <div style="position:absolute;left:1020px;top:500px; background-color:yellow;">
+    <table border="6" color="yellow;">
+        <tr>
+            <td><img width="60px" id="upleft" src="upleft.jpg"<button onclick="yellowballobj.move(-3,-3);">
+        </button></td>
+            
+            <td><img width="60px" id="up" src="up.jpg"button onclick="yellowballobj.move(0,-3);">
+            </button></td>
+            
+            <td><img width="60px" id="upright" src="upright.jpg"<button onclick="yellowballobj.move(3,-3);">
+        </button></td>
+        </tr>
+
+        <tr>
+           <td><img width="60px" id="left" src="left.jpg"button onclick="yellowballobj.move(-3,0);">
+           </button></td>
+           
+           <td><img width="60px" id="panic" src="panic.jpg"button onclick="fade_out();fade_in();">
+           </button></td>
+            
+           <td><img width="60px" id="right" src="right.jpg"button onclick="yellowballobj.move(3,0);">
+           </button></td>
+        </tr>
+
+        <tr>
+            <td><img width="60px" id="downleft" src="downleft.jpg"button onclick="yellowballobj.move(-3,3);"></td>
+           
+            <td><img width="60px" id="down" src="down.jpg"button onclick="yellowballobj.move(0,3);">
+            </button></td>
+           
+            <td><img width="60px" id="downright" src="downright.jpg"button onclick="yellowballobj.move(3,3);"></td>
+        </tr>
+    </table>
+</div>
+     
+
+
+
+
+
+     
+     
+     
+
+
+
+
+    <!--buttons-->
+     
+
+
+    
+
+
+      <!--end of buttons-->
+
+
+
+
+     </body>
+        <script>
+        <!--functions-->
+        var redballobj;
+        function fade_out(){
+            $("#redball").fadeOut(1000);
+            $("#greenball").fadeOut(1000);
+            $("#purpleball").fadeOut(1000);
+            $("#yellowball").fadeOut(1000);
+
+
+
+        }
+
+        function fade_in(){
+            $("#redball").fadeIn(1000);
+            $("#greenball").fadeIn(1000);
+            $("#purpleball").fadeIn(1000);
+            $("#yellowball").fadeIn(1000);
+         }  
+           
+          
+
+         function stretch_out(){
+            $("#redball").width(1000);
+            $("#greenball").width(1000); 
+            $("#purpleball").width(1000);
+            $("#yellowball").width(1000); 
+  
+         }
+
+
+
+         function stretch_in(){
+            $("#redball").width(100);
+            $("#greenball").width(100); 
+            $("#purpleball").width(100);
+            $("#yellowball").width(100); 
+  
+         }
+
+
+         function move_up_left(incurtimes){
+         for(var i=0;i<=incurtimes;i++){
+            move_up(2);
+            move_left(2);
+
+         }
+        }         
+
+
+        function AnimationObject(cssid){
+            this.fade_out=function(){
+                $(cssid).fadeOut(1000);
+
+            }   
+
+        this.move=function(dx,dy){
+
+           console.log("distance across is"+dx);
+           console.log("distance up/down is"+dy);
+           var offset=$(cssid).offset();
+           offset.left=offset.left+dx;
+           offset.top=offset.top+dy;
+           $(cssid).css({top:offset.top+'px',left:offset.left+'px'});
+        }
+            <!--Concatenation-->
+
+        }
+
+         $(document).ready(function(){
+            redballobj=new AnimationObject("#redball");
+            console.log("document ready ran");
+            greenballobj=new AnimationObject("#greenball");
+            purpleballobj=new AnimationObject("#purpleball");
+            yellowballobj=new AnimationObject("#yellowball");
+            
+         }
+         );  
+            
+         
+        </script>
+
+     </html>
